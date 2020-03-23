@@ -1,0 +1,37 @@
+{
+  "/v1/user/login": {
+    "target": "https://test-api.live.gbksoft.net/rest",
+    "secure": false,
+    "changeOrigin": true
+  },
+  "/v1/user/register": {
+    "target": "https://test-api.live.gbksoft.net/rest",
+    "secure": false,
+    "changeOrigin": true
+  },
+  "/v1/user/logout": {
+    "target": "https://test-api.live.gbksoft.net/rest",
+    "secure": false,
+    "changeOrigin": true
+  },
+  "/v1/user/profile": {
+    "target": "https://test-api.live.gbksoft.net/rest",
+    "secure": false,
+    "changeOrigin": true
+  },
+  "/v1/user/location": {
+    "target": "https://test-api.live.gbksoft.net/rest",
+    "secure": false,
+    "changeOrigin": true
+  },
+  "/v1/user": {
+    "target": "https://test-api.live.gbksoft.net/rest",
+    "secure": false,
+    "changeOrigin": true
+  },
+  "/v1/user/profile/image": {
+    "target": "https://test-api.live.gbksoft.net/rest",
+    "secure": false,
+    "changeOrigin": true
+  }
+}

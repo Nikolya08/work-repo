@@ -1,0 +1,26 @@
+<div class="search">
+  <input class="search__field"
+         [(ngModel)]="searchText"
+         placeholder="Search">
+</div>
+<agm-map
+  [latitude]="lat"
+  [longitude]="lon"
+  [zoom]="6"
+  (mapClick)="addMarker($event.coords.lat, $event.coords.lng)"
+>
+  <agm-marker
+    *ngFor="let marker of this.userGlobalInfo | search: searchText : 'firstName'"
+    [latitude]="marker.lat"
+    [longitude]="marker.lon"
+    [opacity]="alpha"
+    [markerDraggable]="true"
+    (markerClick)="selectMarker($event)"
+  >
+  </agm-marker>
+</agm-map>
+
+<div *ngIf="selectedMarker" class="list__user-info">
+  <img src="{{ selectedMarker.img }}" alt="User image">
+  <span>Name: {{ selectedMarker.name }}</span>
+</div>

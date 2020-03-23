@@ -1,0 +1,20 @@
+<div class="search">
+  <input class="search__field"
+         [(ngModel)]="searchText"
+         placeholder="Search">
+</div>
+<div class="list">
+  <div *ngFor="let user of (userGlobalInfo | search: searchText : 'firstName')" class="list__user left">
+    <div class="list__user-icon" *ngIf="user.image !== null">
+      <img src="{{user.image}}" alt="User image">
+    </div>
+    <div class="list__user-icon" *ngIf="user.image === null">
+      <img src="https://www.w3schools.com/howto/img_avatar.png" alt="">
+    </div>
+    <div class="list__user-info">
+      <span>First name: {{user.firstName}}</span>
+      <span>Last name: {{user.lastName}}</span>
+      <span>{{user.city}}, {{user.country}}</span>
+    </div>
+  </div>
+</div>
